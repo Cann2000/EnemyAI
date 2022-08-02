@@ -210,7 +210,9 @@ public class ZombieAI : MonoBehaviour
             Zaman = 0;
         }
     }
-
+    
+    // Eğer hasar alırsa
+    
     void HitFollow()
     {
         pos = new Vector3(karakter.position.x, transform.position.y, karakter.position.z);
