@@ -26,7 +26,7 @@ public class ZombieAI : MonoBehaviour
     bool attack;
     bool deadSound;
     public bool Damaged;
-    public bool HitYedi;
+    public bool Hit;
 
     public float Distance;
 
@@ -96,7 +96,7 @@ public class ZombieAI : MonoBehaviour
 
             if (Health > 0)
             {
-                if (!HitYedi)
+                if (!Hit)
                 {
                     Follow();
                 }
@@ -306,7 +306,7 @@ public class ZombieAI : MonoBehaviour
     {
         yield return new WaitForSeconds(sure);
 
-        HitYedi = false;
+        Hit = false;
     }
 
     IEnumerator Damage(float sure)
